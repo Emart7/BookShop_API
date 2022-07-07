@@ -9,14 +9,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
+//import java.util.Optional;
 
 @RestController
 public class BootController {
 
     private final Logger log = LoggerFactory.getLogger(BootController.class);
 
-    private BookRepository bookRepository;
+    private final BookRepository bookRepository;
 
     public BootController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -50,7 +50,7 @@ public class BootController {
         return bookRepository.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
 //        return bookRepository.findById(id).orElse(null);
 
-        //Ooption 2
+        //Option 2
 //        Optional<Book> bookOpt = bookRepository.findById(id);
 //        if(bookOpt.isPresent()){
 //            return ResponseEntity.ok(bookOpt.get());
