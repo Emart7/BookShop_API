@@ -12,13 +12,13 @@ import java.util.List;
 //import java.util.Optional;
 
 @RestController
-public class BootController {
+public class BookController {
 
-    private final Logger log = LoggerFactory.getLogger(BootController.class);
+    private final Logger log = LoggerFactory.getLogger(BookController.class);
 
     private final BookRepository bookRepository;
 
-    public BootController(BookRepository bookRepository) {
+    public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
